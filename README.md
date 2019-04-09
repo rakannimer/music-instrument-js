@@ -1,17 +1,17 @@
-## Instrument JS
+## Music Instrument JS
 
 Play any musical instrument from the browser
 
 ## Install
 
 ```sh
-  yarn add instrument-js
+  yarn add music-instrument-js
 ```
 
 ## Usage
 
 ```typescript
-import { getInstrument, startNote, stopNote, instrumentNames } from "instrument-js";
+import { getInstrument, startNote, stopNote, instrumentNames } from "music-instrument-js";
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 

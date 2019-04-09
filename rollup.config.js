@@ -8,11 +8,6 @@ export default {
       format: "cjs"
     },
     {
-      file: "dist/index.umd.js",
-      format: "umd",
-      name: "TEMP_UMD_MODULE_NAME_CHANGE_ME"
-    },
-    {
       file: "dist/index.esm.js",
       format: "esm"
     }
