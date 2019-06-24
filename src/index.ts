@@ -3,9 +3,6 @@ import instrumentNames from "./constants/INSTRUMENTS";
 
 export { InstrumentName, Player, instrumentNames };
 
-export type PlayingNotesMap = Map<string, Player>;
-export type InstrumentsMap = Map<InstrumentName, NotePlayer>;
-
 export const getAudioContext = () => {
   const AudioContext =
     // @ts-ignore
@@ -39,8 +36,8 @@ export type NotePlayer = {
   ) => void;
   stop: (noteName?: string) => void;
 };
-const instruments = new Map() as InstrumentsMap;
-const playingNotes = new Map() as PlayingNotesMap;
+const instruments = new Map<InstrumentName, NotePlayer>();
+const playingNotes = new Map<string, Player>();
 
 export const getInstrument = async (instrumentName: InstrumentName) => {
   if (instruments.has(instrumentName)) {

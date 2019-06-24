@@ -1,19 +1,18 @@
 {
   "name": "music-instrument-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "parcel demo/index.html -d demo-dist",
     "build": "rm -rf ./dist/ && rollup -c",
-    "prepublish": "npm run test && npm run build",
+    "prepublish": "yarn tsc  && npm run build",
     "commit": "git-cz",
     "setup:semantic-release": "npx semantic-release-cli setup"
   },
   "husky": {
-    "pre-commit": "prettier src/* --write",
-    "pre-push": "npm run test"
+    "pre-commit": "prettier src/* --write"
   },
   "repository": {
     "type": "git",
